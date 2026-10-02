@@ -1,0 +1,30 @@
+Algoritmo sin_titulo
+	Escribir 'inserta un tipo de producto (a, b o c)'
+	Leer tipo
+	Mientras tipo<>'a' Y tipo<>'b' Y tipo<>'c' Hacer
+		Escribir 'inserta un tipo de producto valido'
+		Leer tipo
+	FinMientras
+	Escribir 'inserta su precio'
+	Leer precio
+	Mientras precio<=0 Hacer
+		Escribir 'inserta un precio valido'
+		Leer precio
+	FinMientras
+	Si tipo=='a' Entonces
+		Escribir 'se le realizará un 7%'
+		precioReb <- (precio*7)/100
+		precioNuevo <- precio-precioReb
+	SiNo
+		Si tipo=='c' o precio<500 Entonces
+			Escribir 'se le realizará un 12%'
+			precioReb <- (precio*12)/100
+			precioNuevo <- precio-precioReb
+		SiNo
+			Escribir 'se le realizará un 9%'
+			precioReb <- (precio*9)/100
+			precioNuevo <- precio-precioReb
+		FinSi
+	FinSi
+	Escribir 'el precio nuevo es ', precioNuevo
+FinAlgoritmo

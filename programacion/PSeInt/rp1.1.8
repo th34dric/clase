@@ -1,0 +1,35 @@
+Algoritmo sin_titulo
+	Repetir
+		Escribir 'inserta horas, minutos y segundos'
+		Leer hor1, min1, seg1
+	Hasta Que hor1>=0 Y hor1<=23 Y min1>=0 Y min1<=59 Y seg1>=0 Y seg1<=59
+	Repetir
+		Escribir 'inserta otras horas, minutos y segundos'
+		Leer hor2, min2, seg2
+	Hasta Que hor2>=0 Y hor2<=23 Y min2>=0 Y min2<=59 Y seg2>=0 Y seg2<=59
+	Si hor1>hor2 Entonces
+		Escribir 'hora 1 es mayor'
+	SiNo
+		Si hor2>hor1 Entonces
+			Escribir 'hora 2 es mayor'
+		SiNo
+			Si min1>min2 Entonces
+				Escribir 'hora 1 es mayor'
+			SiNo
+				Si min2>min1 Entonces
+					Escribir 'hora 2 es mayor'
+				SiNo
+					Si seg1>seg2 Entonces
+						Escribir 'hora 1 es mayor'
+					SiNo
+						Si seg2>seg1 Entonces
+							Escribir 'hora 2 es mayor'
+						SiNo
+							Escribir 'las horas son iguales'
+						FinSi
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+FinAlgoritmo
