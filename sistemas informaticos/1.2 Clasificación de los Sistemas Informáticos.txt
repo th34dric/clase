@@ -1,0 +1,12 @@
+clasificación de los sistemas informaticos
+
+1.
+A-> firmware para un reloj deportivo - sistema embebido ya que es el firmware no el reloj en si, consume poca energía un hardware de uso único y procesa en tiempo real
+B-> motor de recomendación de una tienda online - servidor porque necita potencia, tiene q estar 24/7 conectado y recibe muchas peticiones a la vez
+C-> simulador molecular para vacunas - superordenador porque tiene que calcular millones de cosas a la vez sin dificultad
+D-> app móvil de gestión de tareas - pc/móvil por su versatilidad y facilidad a la hora de utilizarla sin conexión a internet y se conecta vía local
+
+2.
+1. el dispositivo del cliente (app): móvil/pc, si es en móvil: pantalla táctil, conexión 5g, gps y en pc: monitor, torre, teclado, ratón, etc.
+2. el servidor central (backend): servidor: la característica principal es que son ordenadores potentes, diseñados para estar encendidos 24/7 y sirven información a otros ordenadores (clientes)
+3. el dispositivo del repartidor: teléfono movil
