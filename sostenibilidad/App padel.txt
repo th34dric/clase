@@ -1,0 +1,17 @@
+Preguntas posibles:
+- es para un único club o quieres q tengas la posibilidad de elegir el club donde quieres jugar o donde haya espacio
+- q funcionalidades indispensables deben aparecer
+- USUARIO -
+- hay ususarios admins, la gente de los clubs para crear torneos o gente para crear grupos
+
+
+
+
+
+
+
+- quieres un menú de reserva solo o alguna función mas?
+- conectar con otros jugadores y su nivel con opción de notificacion
+- un feed de jugadores con su respectivo nivel
+- en la zona de reserva de pista quieres tener la opción de elegir la pista donde se va a jugar?
+- 
