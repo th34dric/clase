@@ -3,15 +3,25 @@ Preguntas posibles:
 - q funcionalidades indispensables deben aparecer
 - USUARIO -
 - hay ususarios admins, la gente de los clubs para crear torneos o gente para crear grupos
+- 
 
 
 
 
 
 
-
-- quieres un menú de reserva solo o alguna función mas?
+- numero de pistas
+- tipo de pista?
+- horario
+- festivos. abre todos los dias
+- forma de pago, toda la pista entera o una reserva.
+- aparece el precio a la hora de alquilar. 
+- cual es el precio. en todo el dia es el mismo precio
+- opción de crear una cuenta obligatoria?
+- quieres un menú de reserva solo o alguna otro menu mas?
+- algún otro servicio aparte de alquilar la pista, vender bolas, bar...
 - conectar con otros jugadores y su nivel con opción de notificacion
 - un feed de jugadores con su respectivo nivel
 - en la zona de reserva de pista quieres tener la opción de elegir la pista donde se va a jugar?
+- zona de atención al cliente para algún inconveniente con la pista o instalaciones
 - 
