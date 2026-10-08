@@ -5,13 +5,13 @@
                 "id": "c1",
                 "marca": "Toyota",
                 "modelo": "Corolla",
-                "electrico": "false"
+                "electrico": false
             },
             {
                 "id": "c2",
                 "marca": "Tesla",
                 "modelo": "Model 3",
-                "electrico": "true"
+                "electrico": true
             }
         ]
     }
