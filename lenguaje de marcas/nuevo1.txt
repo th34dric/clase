@@ -1,0 +1,10 @@
+<!-- Ejercicio 3 -->
+
+<producto>
+	<nombre precio="85" moneda="EUR">
+		Silla de escritorio
+	</nombre>
+</producto>
+
+<!-- Ejercicio 4 -->
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="clase.xsd">
+    <estudiante>
+        <nombre>Laura</nombre>
+        <edad>20</edad>
+    </estudiante>
+    <estudiante>
+        <nombre>Carlos</nombre>
+        <edad>22</edad>
+        _________________________________________________________
+        |                                                       |
+        |                                                       |
+        |                                                       |
+        |                                                       |
+        _________                                       _________
+        |       |                                       |       |
+        |       |                                       |       |
+        |       |                                       |       |
+        |       |                                       |       |
+        _________                                       _________
+        |                                                       |
+        |                                                       |
+        |                                                       |
+        |                                                       |
+        _________________________________________________________
+    </estudiante>
+</clase>
