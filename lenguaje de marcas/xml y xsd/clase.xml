@@ -4,9 +4,11 @@
     <estudiante>
         <nombre>Laura</nombre>
         <edad>20</edad>
+        <municipio>Isla Cristina</municipio>
     </estudiante>
     <estudiante>
         <nombre>Carlos</nombre>
         <edad>22</edad>
+        <municipio>Lepe</municipio>
     </estudiante>
 </clase>

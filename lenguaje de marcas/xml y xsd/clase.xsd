@@ -8,6 +8,7 @@
                         <xs:sequence>
                             <xs:element name="nombre" type="xs:string"/>
                             <xs:element name="edad" type="xs:integer"/>
+                            <xs:element name="municipio" type="xs:string"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
