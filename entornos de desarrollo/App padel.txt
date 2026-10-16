@@ -3,11 +3,6 @@ Preguntas posibles:
 - q funcionalidades indispensables deben aparecer
 - USUARIO -
 - hay ususarios admins, la gente de los clubs para crear torneos o gente para crear grupos
-- 
-
-
-
-
 
 
 - numero de pistas
@@ -24,4 +19,34 @@ Preguntas posibles:
 - un feed de jugadores con su respectivo nivel
 - en la zona de reserva de pista quieres tener la opción de elegir la pista donde se va a jugar?
 - zona de atención al cliente para algún inconveniente con la pista o instalaciones
-- 
+
+
+actua como un profesional del scrum. te voy a pasar una serie de datos recopilados del cliente para crear una app de padel, a partir de esos datos, quiero q saques todas las tareas que debemos seguir para despues dividirlas en sprints. ten en cuenta q vamos a realizar la app sin codigo ni nada, con una web para diseñar las interfaces y distintas pantallas, pero tenemos q montar la app entera asi q no solo te acortes a las tareas q saques de la informacion, sino las tareas genericas q hay q seguir para montar la app. la informacion es: 5 pistas de padel, 3 indoor y 2 outdoor, las pistas indoor son mas caras, el horario es de 9am a 13:30 y de 17:00 a 23:00, el dueño debe tener la posibilidad de cambiar el horario y la disponibilidad de las pistas en el fin de semana, el precio es en el primer tramo horario de 20€ y el precio del segundo tramo es de 24€-28€, se tiene q poder pagar en completo desde la app y con la posibilidad de pagar por separado, hay q crearse una cuenta para realizar el pago, la app es solo de reserva de pista sin ningun otro servicio aparte, debe tener la posibilidad de conectar con otros jugadores de tu mismo nivel, tiene q tener una opcion de cancelamiento de la reserva y al iniciar la reserva se debe seleccionar la hora a la q se desea jugar y q te diga las pistas disponibles.
+
+
+Épica 3. Diseño UX/UI y navegación
+PB-18	Definir la identidad visual: colores, tipografía, iconos y componentes.				P0
+PB-19	Crear los bocetos iniciales de las pantallas (wireframes).					P0
+PB-20	Diseñar el mapa de navegación de la aplicación.							P0
+PB-21	Diseñar la pantalla de inicio y el acceso al proceso de reserva.				P0
+PB-22	Diseñar las pantallas de registro, inicio de sesión y recuperación de contraseña.		P0
+PB-23	Diseñar el calendario, la selección de hora y las pistas disponibles.				P0
+PB-24	Diseñar el resumen de la reserva y las opciones de pago.					P0
+PB-25	Diseñar las pantallas de reservas activas, anteriores y canceladas.				P0
+PB-26	Diseñar las pantallas para buscar jugadores de nivel similar.					P0
+PB-27	Diseñar el perfil del usuario.									P0
+PB-28	Diseñar el panel de administración del propietario.						P0
+PB-29	Diseñar los estados de carga, errores, ausencia de resultados y operaciones completadas.	P0
+PB-30	Adaptar los diseños a móvil, tablet y ordenador.						P0
+PB-31	Crear un prototipo navegable y validarlo con el cliente.					P0
+
+Épica 4. Registro, inicio de sesión y perfiles
+PB-32	Crear el formulario de registro de usuarios.	P0
+PB-33	Configurar el inicio y cierre de sesión.	P0
+PB-34	Implementar la recuperación de contraseña.	P0
+PB-35	Configurar la validación de los datos del formulario.	P0
+PB-36	Crear y almacenar los perfiles de los usuarios.	P0
+PB-37	Añadir la información de nivel de pádel al perfil.	P0
+PB-38	Permitir modificar los datos del perfil y el nivel de juego.	P0
+PB-39	Configurar los roles y permisos de jugador y administrador.	P0
+PB-40	Gestionar el cierre de cuenta y la eliminación de los datos cuando corresponda.	P1

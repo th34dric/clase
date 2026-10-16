@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demostración Completa: Estándares HTML5, CSS Grid y Flexbox</title>
+  
+  <!-- Vinculación a la hoja de estilos externa -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Vinculación para auto-descubrimiento del Canal RSS 2.0 -->
+  <link rel="alternate" type="application/rss+xml" title="Canal de Noticias RSS" href="feed.xml">
+</head>
+<body>
+
+  <!-- ========================================================================
+       ESTRUCTURA SEMÁNTICA 1: <header> y <nav> (Flexbox Unidimensional)
+       ======================================================================== -->
+  <header class="header-principal">
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="logo">WebEstándares</div>
+      <ul class="nav-links">
+        <li><a href="#flexbox">Flexbox</a></li>
+        <li><a href="#grid">CSS Grid</a></li>
+        <li><a href="#formulario">Validación Nativa</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========================================================================
+       ESTRUCTURA SEMÁNTICA 2: Layout Contenedor Principal en CSS Grid 2D
+       ======================================================================== -->
+  <div class="layout-global">
+
+    <!-- ESTRUCTURA SEMÁNTICA 3: <aside> (Barra lateral / Información secundaria) -->
+    <aside class="aside-sidebar">
+      <h3>Información del Documento</h3>
+      <p>Este documento integra todas las etiquetas semánticas de HTML5 para validación en el W3C.</p>
+      <hr class="separador">
+      <p><strong>Canal RSS:</strong></p>
+      <p><a href="feed.xml" target="_blank">Suscripción al canal de noticias (RSS 2.0)</a></p>
+    </aside>
+
+    <!-- ESTRUCTURA SEMÁNTICA 4: <main> (Contenido principal y único) -->
+    <main>
+
+      <!-- SECCIÓN 1: Demostración Flexbox vs CSS Grid -->
+      <section id="flexbox">
+        <h2>1. Demostración de Flexbox vs CSS Grid</h2>
+        <p>El menú de navegación superior utiliza <code>display: flex</code> para alinear el logo y la lista horizontalmente en 1 dimensión.</p>
+        <p>El contenedor global utiliza <code>display: grid</code> para organizar la barra lateral (<code>&lt;aside&gt;</code>) y el contenido principal (<code>&lt;main&gt;</code>) en 2 dimensiones.</p>
+      </section>
+
+      <!-- SECCIÓN 2: Rejilla Responsive de Tarjetas con CSS Grid -->
+      <section id="grid">
+        <h2>2. Galería en CSS Grid (Responsive Automático)</h2>
+        <p>La siguiente rejilla ajusta el número de columnas según el tamaño de pantalla mediante <code>repeat(auto-fit, minmax(220px, 1fr))</code> sin usar Media Queries.</p>
+        
+        <div class="card-grid">
+          <!-- ESTRUCTURA SEMÁNTICA 5: <article> (Unidad de contenido independiente) -->
+          <article class="card">
+            <h3>Artículo 1: Flexbox</h3>
+            <p>Ideal para alinear elementos unidimensionales como menús, listas e inputs.</p>
+          </article>
+
+          <article class="card">
+            <h3>Artículo 2: CSS Grid</h3>
+            <p>Ideal para estructuras bidimensionales complejas y galerías de elementos.</p>
+          </article>
+
+          <article class="card">
+            <h3>Artículo 3: Box Model</h3>
+            <p>Gracias al reset universal <code>box-sizing: border-box</code>, los paddings no alteran el ancho total.</p>
+          </article>
+
+          <article class="card">
+            <h3>Artículo 4: Semántica</h3>
+            <p>Mejora la accesibilidad (lectores de pantalla) y el SEO en buscadores.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: Formulario con Validación Nativa sin JavaScript -->
+      <section id="formulario">
+        <h2>3. Formulario de Registro (Validación Nativa HTML5 sin JavaScript)</h2>
+        <p>Prueba a enviar el formulario vacío o con formatos incorrectos para ver la validación nativa del navegador y la reacción de los estilos CSS (borde verde si es correcto, borde rojo si es inválido).</p>
+
+        <form class="form-validative" action="#" method="POST">
+          
+          <div class="form-group">
+            <label for="nombre">Nombre completo (Obligatorio, mín. 3 letras):</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" minlength="3" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico (Formato email obligatorio):</label>
+            <input type="email" id="email" name="email" placeholder="usuario@dominio.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="dni">DNI / NIF (Patrón de 8 números y 1 letra mayúscula):</label>
+            <input type="text" id="dni" name="dni" placeholder="12345678X" pattern="[0-9]{8}[A-Z]" title="Debe introducir 8 números y 1 letra mayúscula" required>
+          </div>
+
+          <div class="form-group">
+            <label for="edad">Edad (Rango permitido de 18 a 99 años):</label>
+            <input type="number" id="edad" name="edad" min="18" max="99" placeholder="18" required>
+          </div>
+
+          <div class="form-group">
+            <label for="fecha">Fecha de reserva:</label>
+            <input type="date" id="fecha" name="fecha" required>
+          </div>
+
+          <div class="form-group">
+            <label for="curso">Selecciona un curso:</label>
+            <select id="curso" name="curso" required>
+              <option value="">-- Elige una opción --</option>
+              <option value="html">HTML5 y CSS3</option>
+              <option value="js">JavaScript Moderno</option>
+            </select>
+          </div>
+
+          <button type="submit">Enviar Formulario</button>
+        </form>
+      </section>
+
+      <!-- SECCIÓN 4: Elementos Multimedia y Demás Etiquetas Semánticas -->
+      <section id="multimedia">
+        <h2>4. Elementos Multimedia Semánticos (<code>&lt;figure&gt;</code>, <code>&lt;mark&gt;</code>, <code>&lt;time&gt;</code>)</h2>
+        
+        <p>Ejemplo de resaltado semántico con la etiqueta <mark>etiqueta &lt;mark&gt;</mark> en un texto.</p>
+        
+        <p>Publicado el <time datetime="2026-10-12">12 de octubre de 2026</time> por la organización.</p>
+
+        <!-- ESTRUCTURA SEMÁNTICA 6: <figure> y <figcaption> -->
+        <figure class="figura-contenedor">
+          <svg width="100" height="100" viewBox="0 0 100 100" class="svg-icono">
+            <circle cx="50" cy="50" r="40" stroke="#2b6cb0" stroke-width="4" fill="#ebf8ff" />
+            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="#2b6cb0" font-weight="bold">W3C SVG</text>
+          </svg>
+          <figcaption class="figura-leyenda">
+            Gráfico vectorial SVG incrustado dentro de un contenedor semántico <code>&lt;figure&gt;</code> con pie de foto <code>&lt;figcaption&gt;</code>.
+          </figcaption>
+        </figure>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ========================================================================
+       ESTRUCTURA SEMÁNTICA 7: <footer> (Pie de página global)
+       ======================================================================== -->
+  <footer class="footer-principal">
+    <p>&copy; 2026 Curso de Desarrollo Web (25H). Todos los derechos reservados.</p>
+    <!-- ESTRUCTURA SEMÁNTICA 8: <address> (Información de contacto del autor) -->
+    <address class="contacto-autor">
+      Contacto: <a href="mailto:info@desarrolloweb.com">info@desarrolloweb.com</a> | Sevilla, España
+    </address>
+  </footer>
+
+</body>
+</html>

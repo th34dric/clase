@@ -1,0 +1,255 @@
+/* ==========================================================================
+   1. RESET UNIVERSAL Y BOX MODEL (border-box)
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #2d3748;
+  background-color: #f7fafc;
+}
+
+/* Estilos globales para destacar las secciones semánticas */
+section {
+  background-color: #ffffff;
+  margin: 20px 0;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2, h3 {
+  color: #1a365d;
+  margin-bottom: 12px;
+}
+
+h2 {
+  border-bottom: 2px solid #3182ce;
+  padding-bottom: 6px;
+  font-size: 1.4rem;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+code {
+  background-color: #edf2f7;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  color: #c53030;
+}
+
+.separador {
+  margin: 12px 0;
+  border: 0;
+  border-top: 1px solid #cbd5e0;
+}
+
+/* ==========================================================================
+   2. CASO 1: FLEXBOX (Navegación Unidimensional)
+   ========================================================================== */
+.header-principal {
+  background-color: #1a365d;
+  color: #ffffff;
+  padding: 1rem 2rem;
+}
+
+/* Contenedor Flexbox del Menú */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #63b3ed;
+}
+
+.nav-links {
+  display: flex; /* Flexbox secundario interno */
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #63b3ed;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   3. CASO 2: CSS GRID LAYOUT MACRO (Layout Global en 2D)
+   ========================================================================== */
+.layout-global {
+  display: grid;
+  grid-template-columns: 1fr; /* Columna única por defecto para móviles */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* En pantallas medianas y grandes, pasamos a 2 columnas (Sidebar + Main) */
+@media (min-width: 768px) {
+  .layout-global {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+.aside-sidebar {
+  background-color: #ebf8ff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #bee3f8;
+  height: fit-content;
+}
+
+/* ==========================================================================
+   4. CASO 3: CSS GRID REJILLA DE TARJETAS (Responsive sin Media Queries)
+   ========================================================================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e0;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: #2b6cb0;
+}
+
+/* ==========================================================================
+   5. FORMULARIO CON VALIDACIÓN NATIVA HTML5 Y CSS (`:user-invalid` / `:valid`)
+   ========================================================================== */
+.form-validative {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+  margin-top: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 2px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+/* Pseudoclases CSS de validación nativa */
+.form-group input:user-invalid,
+.form-group select:user-invalid,
+.form-group textarea:user-invalid {
+  border-color: #e53e3e;
+  background-color: #fff5f5;
+}
+
+.form-group input:valid:not(:placeholder-shown) {
+  border-color: #38a169;
+  background-color: #f0fff4;
+}
+
+button[type="submit"] {
+  background-color: #2b6cb0;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1a365d;
+}
+
+/* ==========================================================================
+   6. ELEMENTOS MULTIMEDIA SEMÁNTICOS
+   ========================================================================== */
+.figura-contenedor {
+  margin-top: 16px;
+  text-align: center;
+  background-color: #edf2f7;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.svg-icono {
+  display: block;
+  margin: 0 auto;
+}
+
+.figura-leyenda {
+  font-size: 0.85rem;
+  color: #4a5568;
+  margin-top: 8px;
+}
+
+/* ==========================================================================
+   7. ESTILOS DEL PIE DE PÁGINA (Footer)
+   ========================================================================== */
+.footer-principal {
+  background-color: #1a202c;
+  color: #a0aec0;
+  text-align: center;
+  padding: 24px;
+  margin-top: 40px;
+}
+
+.footer-principal a {
+  color: #63b3ed;
+  text-decoration: none;
+}
+
+.contacto-autor {
+  font-style: normal;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
