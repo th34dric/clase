@@ -18,6 +18,7 @@ git diff --staged -> para ver los cambios que se han hecho en toda la caja antes
 INTELLIJ ATAJOS
 maina -> static void main(String[] args) {}
 sout -> System.out.println();
+fori -> genera el for entero
 ctrl + alt + l -> ordenar codigo
 
 shift + f6 -> le cambia el nombre a la variable en todo el código

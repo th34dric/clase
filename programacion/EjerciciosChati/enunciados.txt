@@ -1,5 +1,6 @@
 Ejercicio 1. Múltiplos de un número
 Realizar un programa que muestre por pantalla todos los números comprendidos entre 1 y 150 que sean múltiplos de 5. Para cada número encontrado, deberá mostrar un mensaje indicando que es múltiplo de 5.
+
 Ejercicio 2. Tabla de multiplicar inversa
 Realizar un programa que lea un número entero entre 0 y 10 y visualice su tabla de multiplicar desde el 10 hasta el 0.
 
