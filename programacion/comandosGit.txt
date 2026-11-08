@@ -1,3 +1,8 @@
+COMANDOS GIT (ED - RAMAS)
+git checkout -b develop -> crear otra rama
+
+
+
 COMANDOS GIT
 git clone url . -> clonar el repositorio en la carpeta sin el nombre del repositorio (sin el punto se crea una carpeta con el nombre del repositorio)
 git init -> cuando iniciamos un git vacio esto es para iniciarlo
