@@ -1,0 +1,375 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.11.09 09:34:28 =~=~=~=~=~=~=~=~=~=~=~=
+login as: usuario
+usuario@127.0.0.2's password: 
+Linux usuario 6.12.107+deb13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.107-1 (2026-08-29) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Nov  9 09:32:54 2026 from 10.0.2.2
+usuario@usuario:~$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS                  PORTS     NAMES
+637722db46ff   mysql:latest   "docker-entrypoint.s"   3 days ago   Exited (0) 3 days ago             mysql
+usuario@usuario:~$ usuario@usuario:~$ usuario@usuario:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+usuario@usuario:~$ docke undocker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestdocker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+docker: Error response from daemon: Conflict. The container name "/mysql" is already in use by container "637722db46ffe746cf66889fbcbd6898b7061f6481076fca4ca8b343c0301a27". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+usuario@usuario:~$ usuario@usuario:~$ docker ps .a-a
+CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS                  PORTS     NAMES
+637722db46ff   mysql:latest   "docker-entrypoint.s"   3 days ago   Exited (0) 3 days ago             mysql
+usuario@usuario:~$ docker rm
+docker: 'docker rm' requires at least 1 argument
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+See 'docker rm --help' for more information
+usuario@usuario:~$ docker rm mysql 
+mysql
+usuario@usuario:~$ docker rm mysql ps -arun --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+97fcc33818194d2a794073d43143c6b08227421ce46eaa37881f6c11510bf71c
+usuario@usuario:~$ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                                                    NAMES
+97fcc3381819   mysql:latest   "docker-entrypoint.s"   7 seconds ago   Up 6 seconds   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp, 33060/tcp   mysql
+usuario@usuario:~$ ss -atun
+Netid             State              Recv-Q             Send-Q                                                   Local Address:Port                           Peer Address:Port              
+udp               UNCONN             0                  0                                                            10.0.2.15:68                                  0.0.0.0:*                 
+udp               UNCONN             0                  0                                [fd17:625c:f037:2:a00:27ff:feb4:84b6]:546                                    [::]:*                 
+udp               UNCONN             0                  0                                [fd17:625c:f037:2:345:d3e4:714b:8daf]:546                                    [::]:*                 
+udp               UNCONN             0                  0                                   [fe80::82b2:84f1:ae68:9343]%enp0s3:546                                    [::]:*                 
+tcp               LISTEN             0                  4096                                                           0.0.0.0:3306                                0.0.0.0:*                 
+tcp               LISTEN             0                  128                                                            0.0.0.0:22                                  0.0.0.0:*                 
+tcp               ESTAB              0                  0                                                            10.0.2.15:22                                 10.0.2.2:54472             
+tcp               LISTEN             0                  4096                                                              [::]:3306                                   [::]:*                 
+tcp               LISTEN             0                  128                                                               [::]:22                                     [::]:*                 
+usuario@usuario:~$ usuario@usuario:~$ usuario@usuario:~$ apy t update
+Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 56%Leyendo lista de paquetes... 58%Leyendo lista de paquetes... 58%Leyendo lista de paquetes... 59%Leyendo lista de paquetes... 59%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%                                 Error: No se pudo abrir el fichero de bloqueo «/var/lib/apt/lists/lock» - open (13: Permiso denegado)
+Error: No se pudo bloquear el directorio /var/lib/apt/lists/
+Warning: Se produjo un problema al desligar el fichero /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permiso denegado)
+Warning: Se produjo un problema al desligar el fichero /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permiso denegado)
+usuario@usuario:~$ su -
+Contraseña: 
+apt updsu: Fallo de autenticación
+usuario@usuario:~$ apt update
+Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 58%Leyendo lista de paquetes... 58%Leyendo lista de paquetes... 59%Leyendo lista de paquetes... 59%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%                                 Error: No se pudo abrir el fichero de bloqueo «/var/lib/apt/lists/lock» - open (13: Permiso denegado)
+Error: No se pudo bloquear el directorio /var/lib/apt/lists/
+Warning: Se produjo un problema al desligar el fichero /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permiso denegado)
+Warning: Se produjo un problema al desligar el fichero /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permiso denegado)
+usuario@usuario:~$ su -
+Contraseña: 
+root@usuario:~# apt update
+0% [Trabajando]               Obj:1 http://deb.debian.org/debian trixie InRelease
+0% [Esperando las cabeceras]                            Des:2 http://security.debian.org/debian-security trixie-security InRelease [43,4 kB]
+0% [Esperando las cabeceras] [2 InRelease 29,5 kB/43,4 kB 68%]                                                              0% [Esperando las cabeceras]                            Des:3 http://deb.debian.org/debian trixie-updates InRelease [47,3 kB]
+0% [3 InRelease 0 B/47,3 kB 0%]                               0% [Trabajando]0% [Trabajando]0% [Trabajando]0% [Esperando las cabeceras]                            Des:4 http://deb.debian.org/debian trixie-updates/main Sources.diff/Index [8.361 B]
+0% [4 Sources 0 B/8.361 B 0%] [Esperando las cabeceras]                                                       0% [Esperando las cabeceras]                            Des:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages.diff/Index [8.361 B]
+0% [5 Packages 0 B/8.361 B 0%] [Esperando las cabeceras]                                                        28% [Esperando las cabeceras]                             Des:6 http://security.debian.org/debian-security trixie-security/main Sources [262 kB]
+28% [Esperando las cabeceras] [6 Sources 0 B/262 kB 0%]                                                       Des:7 http://deb.debian.org/debian trixie-updates/main Sources T-2026-11-05-1401.10-F-2026-11-05-1401.10.pdiff [346 B]
+40% [7 Sources 0 B/346 B 0%] [6 Sources 134 kB/262 kB 51%]                                                          52% [6 Sources 262 kB/262 kB 100%]                                  52% [Trabajando]                Des:7 http://deb.debian.org/debian trixie-updates/main Sources T-2026-11-05-1401.10-F-2026-11-05-1401.10.pdiff [346 B]
+53% [Esperando las cabeceras]53% [6 Sources store 0 B] [Esperando las cabeceras]                                                   Des:8 http://deb.debian.org/debian trixie-updates/main amd64 Packages T-2026-11-05-1401.10-F-2026-11-05-1401.10.pdiff [175 B]
+53% [6 Sources store 0 B] [Esperando las cabeceras]                                                   Des:8 http://deb.debian.org/debian trixie-updates/main amd64 Packages T-2026-11-05-1401.10-F-2026-11-05-1401.10.pdiff [175 B]
+53% [6 Sources store 0 B] [Esperando las cabeceras]                                                   54% [Esperando las cabeceras]                             Des:9 http://security.debian.org/debian-security trixie-security/main amd64 Packages [301 kB]
+54% [9 Packages 0 B/301 kB 0%]                              82% [Trabajando]82% [9 Packages store 0 B]83% [Esperando las cabeceras]                             Des:10 http://security.debian.org/debian-security trixie-security/main Translation-en [181 kB]
+83% [10 Translation-en 0 B/181 kB 0%]                                     100% [Trabajando]100% [10 Translation-en store 0 B]                                  100% [Trabajando]                 Descargados 853 kB en 1s (1.612 kB/s)
+Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 58%Leyendo lista de paquetes... 58%Leyendo lista de paquetes... 59%Leyendo lista de paquetes... 59%Leyendo lista de paquetes... 95%Leyendo lista de paquetes... 95%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 96%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%Leyendo lista de paquetes... 99%                                 Creando árbol de dependencias... 0%Creando árbol de dependencias... 0%Creando árbol de dependencias... 0%Creando árbol de dependencias... 50%Creando árbol de dependencias... 50%                                      Leyendo la información de estado... 0%Leyendo la información de estado... 0%                                        Se pueden actualizar 20 paquetes. Ejecute «apt list --upgradable» para verlos.
+root@usuario:~# apt install deaffault -mysl-l-client
+Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 100%                                  Creando árbol de dependencias... 0%Creando árbol de dependencias... 0%Creando árbol de dependencias... 50%Creando árbol de dependencias... 50%                                      Leyendo la información de estado... 0%Leyendo la información de estado... 0%                                        Error: No se ha podido localizar el paquete default-mysl-client
+root@usuario:~# apt install default-mysl-clientql-client
+Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 100%                                  Creando árbol de dependencias... 0%Creando árbol de dependencias... 0%Creando árbol de dependencias... 50%Creando árbol de dependencias... 50%                                      Leyendo la información de estado... 0%Leyendo la información de estado... 0%                                        Upgrading:
+  libpcre2-8-0
+
+Installing:
+  default-mysql-client
+
+Installing dependencies:
+  libconfig-inifiles-perl  libdbi-perl  libncurses6      libterm-readkey-perl  mariadb-client-compat  mariadb-common
+  libdbd-mariadb-perl      libmariadb3  libpcre2-posix3  mariadb-client        mariadb-client-core    mysql-common
+
+Paquetes sugeridos:
+  libclone-perl  libmldbm-perl  libnet-daemon-perl  libsql-statement-perl
+
+Summary:
+  Upgrading: 1, Installing: 13, Removing: 0, Not Upgrading: 19
+  Download size: 5.836 kB
+  Space needed: 86,1 MB / 15,6 GB available
+
+Continue? [S/n] s
+0% [Trabajando]               Des:1 http://deb.debian.org/debian trixie/main amd64 libconfig-inifiles-perl all 3.000003-3+deb13u1 [45,0 kB]
+0% [Esperando las cabeceras] [1 libconfig-inifiles-perl 0 B/45,0 kB 0%]                                                                       2% [Esperando las cabeceras]                            Des:2 http://security.debian.org/debian-security trixie-security/main amd64 libpcre2-8-0 amd64 10.46-1~deb13u3 [299 kB]
+2% [2 libpcre2-8-0 0 B/299 kB 0%] [Esperando las cabeceras]                                                           Des:3 http://deb.debian.org/debian trixie/main amd64 mysql-common all 5.8+1.1.1 [6.784 B]
+2% [2 libpcre2-8-0 29,4 kB/299 kB 10%] [3 mysql-common 0 B/6.784 B 0%]                                                                      4% [2 libpcre2-8-0 29,4 kB/299 kB 10%]                                      Des:4 http://deb.debian.org/debian trixie/main amd64 mariadb-common all 1:11.8.6-0+deb13u1 [29,5 kB]
+5% [2 libpcre2-8-0 132 kB/299 kB 44%] [4 mariadb-common 0 B/29,5 kB 0%]                                                                       7% [2 libpcre2-8-0 132 kB/299 kB 44%]                                     11% [Esperando las cabeceras]                             Des:5 http://security.debian.org/debian-security trixie-security/main amd64 libpcre2-posix3 amd64 10.46-1~deb13u3 [64,1 kB]
+11% [5 libpcre2-posix3 0 B/64,1 kB 0%] [Esperando las cabeceras]                                                                13% [Esperando las cabeceras]                             Des:6 http://deb.debian.org/debian trixie/main amd64 libmariadb3 amd64 1:11.8.6-0+deb13u1 [187 kB]
+13% [6 libmariadb3 0 B/187 kB 0%]                                 17% [Trabajando]                Des:7 http://deb.debian.org/debian trixie/main amd64 libncurses6 amd64 6.5+20250216-2 [105 kB]
+17% [7 libncurses6 0 B/105 kB 0%]                                 20% [Trabajando]                Des:8 http://deb.debian.org/debian trixie/main amd64 mariadb-client-core amd64 1:11.8.6-0+deb13u1 [919 kB]
+20% [8 mariadb-client-core 0 B/919 kB 0%]                                         34% [Trabajando]                Des:9 http://deb.debian.org/debian trixie/main amd64 mariadb-client amd64 1:11.8.6-0+deb13u1 [3.164 kB]
+36% [9 mariadb-client 160 kB/3.164 kB 5%]76% [9 mariadb-client 3.027 kB/3.164 kB 96%]                                            79% [Trabajando]                Des:10 http://deb.debian.org/debian trixie/main amd64 mariadb-client-compat all 1:11.8.6-0+deb13u1 [29,7 kB]
+79% [10 mariadb-client-compat 0 B/29,7 kB 0%]                                             81% [Trabajando]                Des:11 http://deb.debian.org/debian trixie/main amd64 default-mysql-client all 1.1.1 [3.028 B]
+81% [11 default-mysql-client 0 B/3.028 B 0%]                                            82% [Trabajando]                Des:12 http://deb.debian.org/debian trixie/main amd64 libdbi-perl amd64 1.652-2~deb13u1 [867 kB]
+82% [12 libdbi-perl 0 B/867 kB 0%]                                  96% [Trabajando]                Des:13 http://deb.debian.org/debian trixie/main amd64 libdbd-mariadb-perl amd64 1.22-1+b4 [93,6 kB]
+97% [13 libdbd-mariadb-perl 93,6 kB/93,6 kB 100%]                                                 98% [Trabajando]                Des:14 http://deb.debian.org/debian trixie/main amd64 libterm-readkey-perl amd64 2.38-2+b4 [24,6 kB]
+98% [14 libterm-readkey-perl 0 B/24,6 kB 0%]                                            100% [Trabajando]                 Descargados 5.836 kB en 1s (4.698 kB/s)
+Leyendo lista de cambios... 7%Leyendo lista de cambios... 14%Leyendo lista de cambios... 21%Leyendo lista de cambios... 28%Leyendo lista de cambios... 35%Leyendo lista de cambios... 42%Leyendo lista de cambios... 50%Leyendo lista de cambios... 57%Leyendo lista de cambios... 64%Leyendo lista de cambios... 71%Leyendo lista de cambios... 78%Leyendo lista de cambios... 85%Leyendo lista de cambios... 92%Leyendo lista de cambios... 100%                                Leyendo lista de cambios... Hecho.
+
+(Leyendo la base de datos ... (Leyendo la base de datos ... 5%(Leyendo la base de datos ... 10%(Leyendo la base de datos ... 15%(Leyendo la base de datos ... 20%(Leyendo la base de datos ... 25%(Leyendo la base de datos ... 30%(Leyendo la base de datos ... 35%(Leyendo la base de datos ... 40%(Leyendo la base de datos ... 45%(Leyendo la base de datos ... 50%(Leyendo la base de datos ... 55%(Leyendo la base de datos ... 60%(Leyendo la base de datos ... 65%(Leyendo la base de datos ... 70%(Leyendo la base de datos ... 75%(Leyendo la base de datos ... 80%(Leyendo la base de datos ... 85%(Leyendo la base de datos ... 90%(Leyendo la base de datos ... 95%(Leyendo la base de datos ... 100%(Leyendo la base de datos ... 31734 ficheros o directorios instalados actualmente.)
+Preparando para desempaquetar .../libpcre2-8-0_10.46-1~deb13u3_amd64.deb ...
+Progreso: [  0%] [                                                                                                                                                                       ] Progreso: [  2%] [                                                                                                                                                                    ] Desempaquetando libpcre2-8-0:amd64 (10.46-1~deb13u3) sobre (10.46-1~deb13u2) ...
+Progreso: [  4%] [                                                                                                                                                                 ] Configurando libpcre2-8-0:amd64 (10.46-1~deb13u3) ...
+Progreso: [  5%] [                                                                                                                                                              ] Progreso: [  7%] [                                                                                                                                                           ] Seleccionando el paquete libconfig-inifiles-perl previamente no seleccionado.
+(Leyendo la base de datos ... (Leyendo la base de datos ... 5%(Leyendo la base de datos ... 10%(Leyendo la base de datos ... 15%(Leyendo la base de datos ... 20%(Leyendo la base de datos ... 25%(Leyendo la base de datos ... 30%(Leyendo la base de datos ... 35%(Leyendo la base de datos ... 40%(Leyendo la base de datos ... 45%(Leyendo la base de datos ... 50%(Leyendo la base de datos ... 55%(Leyendo la base de datos ... 60%(Leyendo la base de datos ... 65%(Leyendo la base de datos ... 70%(Leyendo la base de datos ... 75%(Leyendo la base de datos ... 80%(Leyendo la base de datos ... 85%(Leyendo la base de datos ... 90%(Leyendo la base de datos ... 95%(Leyendo la base de datos ... 100%(Leyendo la base de datos ... 31734 ficheros o directorios instalados actualmente.)
+Preparando para desempaquetar .../00-libconfig-inifiles-perl_3.000003-3+deb13u1_all.deb ...
+Progreso: [  9%] [                                                                                                                                                        ] Desempaquetando libconfig-inifiles-perl (3.000003-3+deb13u1) ...
+Progreso: [ 11%] [                                                                                                                                                     ] Seleccionando el paquete mysql-common previamente no seleccionado.
+Preparando para desempaquetar .../01-mysql-common_5.8+1.1.1_all.deb ...
+Progreso: [ 12%] [                                                                                                                                                  ] Desempaquetando mysql-common (5.8+1.1.1) ...
+Progreso: [ 14%] [                                                                                                                                               ] Seleccionando el paquete mariadb-common previamente no seleccionado.
+Preparando para desempaquetar .../02-mariadb-common_1%3a11.8.6-0+deb13u1_all.deb ...
+Progreso: [ 16%] [                                                                                                                                            ] Desempaquetando mariadb-common (1:11.8.6-0+deb13u1) ...
+Progreso: [ 18%] [                                                                                                                                         ] Seleccionando el paquete libmariadb3:amd64 previamente no seleccionado.
+Preparando para desempaquetar .../03-libmariadb3_1%3a11.8.6-0+deb13u1_amd64.deb ...
+Progreso: [ 19%] [                                                                                                                                      ] Desempaquetando libmariadb3:amd64 (1:11.8.6-0+deb13u1) ...
+Progreso: [ 21%] [                                                                                                                                   ] Seleccionando el paquete libncurses6:amd64 previamente no seleccionado.
+Preparando para desempaquetar .../04-libncurses6_6.5+20250216-2_amd64.deb ...
+Progreso: [ 23%] [                                                                                                                                 ] Desempaquetando libncurses6:amd64 (6.5+20250216-2) ...
+Progreso: [ 25%] [                                                                                                                              ] Seleccionando el paquete mariadb-client-core previamente no seleccionado.
+Preparando para desempaquetar .../05-mariadb-client-core_1%3a11.8.6-0+deb13u1_amd64.deb ...
+Progreso: [ 26%] [                                                                                                                           ] Desempaquetando mariadb-client-core (1:11.8.6-0+deb13u1) ...
+Progreso: [ 28%] [                                                                                                                        ] Seleccionando el paquete libpcre2-posix3:amd64 previamente no seleccionado.
+Preparando para desempaquetar .../06-libpcre2-posix3_10.46-1~deb13u3_amd64.deb ...
+Progreso: [ 30%] [                                                                                                                     ] Desempaquetando libpcre2-posix3:amd64 (10.46-1~deb13u3) ...
+Progreso: [ 32%] [                                                                                                                  ] Seleccionando el paquete mariadb-client previamente no seleccionado.
+Preparando para desempaquetar .../07-mariadb-client_1%3a11.8.6-0+deb13u1_amd64.deb ...
+Progreso: [ 33%] [                                                                                                               ] Desempaquetando mariadb-client (1:11.8.6-0+deb13u1) ...
+Progreso: [ 35%] [                                                                                                            ] Seleccionando el paquete mariadb-client-compat previamente no seleccionado.
+Preparando para desempaquetar .../08-mariadb-client-compat_1%3a11.8.6-0+deb13u1_all.deb ...
+Progreso: [ 37%] [                                                                                                         ] Desempaquetando mariadb-client-compat (1:11.8.6-0+deb13u1) ...
+Progreso: [ 39%] [                                                                                                      ] Seleccionando el paquete default-mysql-client previamente no seleccionado.
+Preparando para desempaquetar .../09-default-mysql-client_1.1.1_all.deb ...
+Progreso: [ 40%] [                                                                                                   ] Desempaquetando default-mysql-client (1.1.1) ...
+Progreso: [ 42%] [                                                                                                ] Seleccionando el paquete libdbi-perl:amd64 previamente no seleccionado.
+Preparando para desempaquetar .../10-libdbi-perl_1.652-2~deb13u1_amd64.deb ...
+Progreso: [ 44%] [                                                                                             ] Desempaquetando libdbi-perl:amd64 (1.652-2~deb13u1) ...
+Progreso: [ 46%] [                                                                                          ] Seleccionando el paquete libdbd-mariadb-perl previamente no seleccionado.
+Preparando para desempaquetar .../11-libdbd-mariadb-perl_1.22-1+b4_amd64.deb ...
+Progreso: [ 47%] [                                                                                        ] Desempaquetando libdbd-mariadb-perl (1.22-1+b4) ...
+Progreso: [ 49%] [                                                                                     ] Seleccionando el paquete libterm-readkey-perl previamente no seleccionado.
+Preparando para desempaquetar .../12-libterm-readkey-perl_2.38-2+b4_amd64.deb ...
+Progreso: [ 51%] [                                                                                  ] Desempaquetando libterm-readkey-perl (2.38-2+b4) ...
+Progreso: [ 53%] [                                                                               ] Configurando libconfig-inifiles-perl (3.000003-3+deb13u1) ...
+Progreso: [ 54%] [                                                                            ] Progreso: [ 56%] [                                                                         ] Configurando mysql-common (5.8+1.1.1) ...
+Progreso: [ 58%] [                                                                      ] update-alternatives: utilizando /etc/mysql/my.cnf.fallback para proveer /etc/mysql/my.cnf (my.cnf) en modo automático
+Progreso: [ 60%] [                                                                   ] Configurando mariadb-common (1:11.8.6-0+deb13u1) ...
+Progreso: [ 61%] [                                                                ] update-alternatives: utilizando /etc/mysql/mariadb.cnf para proveer /etc/mysql/my.cnf (my.cnf) en modo automático
+Progreso: [ 63%] [                                                             ] Configurando libncurses6:amd64 (6.5+20250216-2) ...
+Progreso: [ 65%] [                                                          ] Progreso: [ 67%] [                                                       ] Configurando libmariadb3:amd64 (1:11.8.6-0+deb13u1) ...
+Progreso: [ 68%] [                                                    ] Progreso: [ 70%] [                                                 ] Configurando libpcre2-posix3:amd64 (10.46-1~deb13u3) ...
+Progreso: [ 72%] [                                               ] Progreso: [ 74%] [                                            ] Configurando libterm-readkey-perl (2.38-2+b4) ...
+Progreso: [ 75%] [                                         ] Progreso: [ 77%] [                                      ] Configurando libdbi-perl:amd64 (1.652-2~deb13u1) ...
+Progreso: [ 79%] [                                   ] Progreso: [ 81%] [                                ] Configurando mariadb-client-core (1:11.8.6-0+deb13u1) ...
+Progreso: [ 82%] [                             ] Progreso: [ 84%] [                          ] Configurando libdbd-mariadb-perl (1.22-1+b4) ...
+Progreso: [ 86%] [                       ] Progreso: [ 88%] [                    ] Configurando mariadb-client (1:11.8.6-0+deb13u1) ...
+Progreso: [ 89%] [                 ] Progreso: [ 91%] [              ] Configurando mariadb-client-compat (1:11.8.6-0+deb13u1) ...
+Progreso: [ 93%] [           ] Progreso: [ 95%] [        ] Configurando default-mysql-client (1.1.1) ...
+Progreso: [ 96%] [     ] Progreso: [ 98%] [   ] Procesando disparadores para man-db (2.13.1-1) ...
+Procesando disparadores para libc-bin (2.41-12+deb13u4) ...
+
+root@usuario:~# mysql -h 127.0.0.1 -u root -pmysql -h 127.0.0.1 -u root -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'root'@'172.17.0.1' (using password: YES)
+root@usuario:~# mysql -h 127.0.0.1 -u root -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'root'@'172.17.0.1' (using password: YES)
+root@usuario:~# mysql -h 127.0.0.1 -u root -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'root'@'172.17.0.1' (using password: YES)
+root@usuario:~# mysql -h 127.0.0.1 -u root -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 12
+Server version: 26.10.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0,004 sec)
+
+MySQL [(none)]> use mysql;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [mysql]> show tables;
++------------------------------------------------------+
+| Tables_in_mysql                                      |
++------------------------------------------------------+
+| columns_priv                                         |
+| component                                            |
+| db                                                   |
+| default_roles                                        |
+| engine_cost                                          |
+| func                                                 |
+| general_log                                          |
+| global_grants                                        |
+| gtid_executed                                        |
+| help_category                                        |
+| help_keyword                                         |
+| help_relation                                        |
+| help_topic                                           |
+| innodb_index_stats                                   |
+| innodb_table_stats                                   |
+| ndb_binlog_index                                     |
+| password_history                                     |
+| plugin                                               |
+| procs_priv                                           |
+| proxies_priv                                         |
+| replication_asynchronous_connection_failover         |
+| replication_asynchronous_connection_failover_managed |
+| replication_group_configuration_version              |
+| replication_group_member_actions                     |
+| role_edges                                           |
+| server_cost                                          |
+| servers                                              |
+| slave_master_info                                    |
+| slave_relay_log_info                                 |
+| slave_worker_info                                    |
+| slow_log                                             |
+| tables_priv                                          |
+| time_zone                                            |
+| time_zone_leap_second                                |
+| time_zone_name                                       |
+| time_zone_transition                                 |
+| time_zone_transition_type                            |
+| user                                                 |
++------------------------------------------------------+
+38 rows in set (0,001 sec)
+
+MySQL [mysql]> select user,host from user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| root             | %         |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
++------------------+-----------+
+5 rows in set (0,001 sec)
+
+MySQL [mysql]> desciberibe user;
++--------------------------+-----------------------------------+------+-----+-----------------------+-------+
+| Field                    | Type                              | Null | Key | Default               | Extra |
++--------------------------+-----------------------------------+------+-----+-----------------------+-------+
+| Host                     | char(255)                         | NO   | PRI |                       |       |
+| User                     | char(32)                          | NO   | PRI |                       |       |
+| Select_priv              | enum('N','Y')                     | NO   |     | N                     |       |
+| Insert_priv              | enum('N','Y')                     | NO   |     | N                     |       |
+| Update_priv              | enum('N','Y')                     | NO   |     | N                     |       |
+| Delete_priv              | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_priv              | enum('N','Y')                     | NO   |     | N                     |       |
+| Drop_priv                | enum('N','Y')                     | NO   |     | N                     |       |
+| Reload_priv              | enum('N','Y')                     | NO   |     | N                     |       |
+| Shutdown_priv            | enum('N','Y')                     | NO   |     | N                     |       |
+| Process_priv             | enum('N','Y')                     | NO   |     | N                     |       |
+| File_priv                | enum('N','Y')                     | NO   |     | N                     |       |
+| Grant_priv               | enum('N','Y')                     | NO   |     | N                     |       |
+| References_priv          | enum('N','Y')                     | NO   |     | N                     |       |
+| Index_priv               | enum('N','Y')                     | NO   |     | N                     |       |
+| Alter_priv               | enum('N','Y')                     | NO   |     | N                     |       |
+| Show_db_priv             | enum('N','Y')                     | NO   |     | N                     |       |
+| Super_priv               | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_tmp_table_priv    | enum('N','Y')                     | NO   |     | N                     |       |
+| Lock_tables_priv         | enum('N','Y')                     | NO   |     | N                     |       |
+| Execute_priv             | enum('N','Y')                     | NO   |     | N                     |       |
+| Repl_slave_priv          | enum('N','Y')                     | NO   |     | N                     |       |
+| Repl_client_priv         | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_view_priv         | enum('N','Y')                     | NO   |     | N                     |       |
+| Show_view_priv           | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_routine_priv      | enum('N','Y')                     | NO   |     | N                     |       |
+| Alter_routine_priv       | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_user_priv         | enum('N','Y')                     | NO   |     | N                     |       |
+| Event_priv               | enum('N','Y')                     | NO   |     | N                     |       |
+| Trigger_priv             | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_tablespace_priv   | enum('N','Y')                     | NO   |     | N                     |       |
+| ssl_type                 | enum('','ANY','X509','SPECIFIED') | NO   |     |                       |       |
+| ssl_cipher               | blob                              | NO   |     | NULL                  |       |
+| x509_issuer              | blob                              | NO   |     | NULL                  |       |
+| x509_subject             | blob                              | NO   |     | NULL                  |       |
+| max_questions            | int unsigned                      | NO   |     | 0                     |       |
+| max_updates              | int unsigned                      | NO   |     | 0                     |       |
+| max_connections          | int unsigned                      | NO   |     | 0                     |       |
+| max_user_connections     | int unsigned                      | NO   |     | 0                     |       |
+| plugin                   | char(64)                          | NO   |     | caching_sha2_password |       |
+| authentication_string    | text                              | YES  |     | NULL                  |       |
+| password_expired         | enum('N','Y')                     | NO   |     | N                     |       |
+| password_last_changed    | timestamp                         | YES  |     | NULL                  |       |
+| password_lifetime        | smallint unsigned                 | YES  |     | NULL                  |       |
+| account_locked           | enum('N','Y')                     | NO   |     | N                     |       |
+| Create_role_priv         | enum('N','Y')                     | NO   |     | N                     |       |
+| Drop_role_priv           | enum('N','Y')                     | NO   |     | N                     |       |
+| Password_reuse_history   | smallint unsigned                 | YES  |     | NULL                  |       |
+| Password_reuse_time      | smallint unsigned                 | YES  |     | NULL                  |       |
+| Password_require_current | enum('N','Y')                     | YES  |     | NULL                  |       |
+| User_attributes          | json                              | YES  |     | NULL                  |       |
++--------------------------+-----------------------------------+------+-----+-----------------------+-------+
+51 rows in set (0,005 sec)
+
+MySQL [mysql]> create user 'usuario' identifyMySQL [mysql]> create user 'usuario' identified by ''u's'u'a'i'o''rio'io'
+    -> ;
+Query OK, 0 rows affected (0,016 sec)
+
+MySQL [mysql]> ;create user 'usuario' identified by 'usuario'describe user;select user,host from
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| root             | %         |
+| usuario          | %         |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
++------------------+-----------+
+6 rows in set (0,001 sec)
+
+MySQL [mysql]> create database prueba
+    -> ;
+Query OK, 1 row affected (0,010 sec)
+
+MySQL [mysql]> grant all privileges on p-pprivileges on 'prueba.*' to ''u's'u'a'r'i'o'';p pprivileges on 'prueba.*' to 'usuario';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''prueba.*' to 'usuario'' at line 1
+MySQL [mysql]> grant all privileges on 'prueba.*' to 'usuario';' 'p+pp*pp*pprueba.* to 'usuario'@;';';l';o';c';a';l';h';o';s';t';';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'prueba.* to 'usuario'@'localhost'' at line 1
+MySQL [mysql]> grant all privileges on *prueba.* to 'usuario'@'localhost';pprueba.* to 'usuario'@'localhost';;;;;;;;;;%;
+    '> ;
+    '> ¡'
+    -> ;
+ERROR 1410 (42000): You are not allowed to create a user with GRANT
+MySQL [mysql]> grant all privileges on prueba.* to 'usuario'@'%;
+;
+';';';;
+Query OK, 0 rows affected (0,005 sec)
+
+MySQL [mysql]> show grants for usuario
+    -> ;
++-----------------------------------------------------+
+| Grants for usuario@%                                |
++-----------------------------------------------------+
+| GRANT USAGE ON *.* TO `usuario`@`%`                 |
+| GRANT ALL PRIVILEGES ON `prueba`.* TO `usuario`@`%` |
++-----------------------------------------------------+
+2 rows in set (0,001 sec)
+
+MySQL [mysql]> exit
