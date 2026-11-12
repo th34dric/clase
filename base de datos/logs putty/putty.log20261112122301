@@ -1,0 +1,139 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.11.12 12:23:01 =~=~=~=~=~=~=~=~=~=~=~=
+login as: usuario
+usuario@127.0.0.2's password: 
+Linux usuario 6.12.107+deb13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.107-1 (2026-08-29) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Nov  9 09:35:19 2026 from 10.0.2.2
+usuario@usuario:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+usuario@usuario:~$ docker start mysql
+mysql
+usuario@usuario:~$ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS          PORTS                                                    NAMES
+97fcc3381819   mysql:latest   "docker-entrypoint.s"   3 days ago   Up 12 seconds   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp, 33060/tcp   mysql
+usuario@usuario:~$ ss -atun
+Netid  State    Recv-Q   Send-Q                             Local Address:Port                                 Peer Address:Port                                
+udp    UNCONN   0        0                                      10.0.2.15:68                                        0.0.0.0:*                                   
+udp    UNCONN   0        0          [fd17:625c:f037:2:345:d3e4:714b:8daf]:546                                          [::]:*                                   
+udp    UNCONN   0        0             [fe80::82b2:84f1:ae68:9343]%enp0s3:546                                          [::]:*                                   
+tcp    LISTEN   0        128                                      0.0.0.0:22                                        0.0.0.0:*                                   
+tcp    LISTEN   0        4096                                     0.0.0.0:3306                                      0.0.0.0:*                                   
+tcp    ESTAB    0        0                                      10.0.2.15:22                                       10.0.2.2:49858                               
+tcp    LISTEN   0        128                                         [::]:22                                           [::]:*                                   
+tcp    LISTEN   0        4096                                        [::]:3306                                         [::]:*                                   
+usuario@usuario:~$ mysql -h 127.0.0.1 -u root -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'root'@'172.17.0.1' (using password: YES)
+usuario@usuario:~$ mysql -h 127.0.0.1 -u root -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'root'@'172.17.0.1' (using password: YES)
+usuario@usuario:~$ dokccker exec -it mysql mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 15
+Server version: 26.10.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> exirt
+Bye
+usuario@usuario:~$ docker exec -it mysql mysql -u root -pmysql -h 127.0.0.1
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 16
+Server version: 26.10.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> use mysql
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [mysql]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| prueba             |
+| sys                |
++--------------------+
+5 rows in set (0,001 sec)
+
+MySQL [mysql]> show databases;use mysqlshow databases;-select user, host from mysql.user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| root             | %         |
+| usuario          | %         |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
++------------------+-----------+
+6 rows in set (0,001 sec)
+
+MySQL [mysql]> exitexithysroistory;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'history' at line 1
+MySQL [mysql]> exit
+Bye
+usuario@usuario:~$ history
+    1  ls
+    2  pwd
+    3  su -
+    4  ip a
+    5  ss -atunp |grep ssh
+    6  su -
+    7  docker -v
+    8  $ docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+    9  exit
+   10  docker run
+   11  docker run
+   12  docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+   13  docker ps
+   14  mysql
+   15  docker exec  -it mysql /bin/bash
+   16  docker stop mysql 
+   17  su -
+   18  docker ps -a
+   19  docker ps
+   20  docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+   21  docker ps -a
+   22  docker rm
+   23  docker rm mysql 
+   24  docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+   25  docker ps
+   26  ss -atun
+   27  apt update
+   28  su -
+   29  apt update
+   30  su -
+   31  docker ps
+   32  docker start mysql
+   33  docker ps
+   34  ss -atun
+   35  mysql -h 127.0.0.1 -u root -p
+   36  docker exec -it mysql mysql -u root -p
+   37  mysql -h 127.0.0.1 -u root -p
+   38  history
+usuario@usuario:~$ ^C
+usuario@usuario:~$ ^[[200~   24  docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql~
+docker runh  --name mysql_container2 -p 3307:3306 -e mysqlMYSQL_ROOT _PASWORD=root -d mysql:latest
+acf715c9eb199f9985055996735540d4a4da0a3ced604af7a748c84bfacc365b
+usuario@usuario:~$ 
