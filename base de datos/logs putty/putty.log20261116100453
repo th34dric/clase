@@ -1,0 +1,236 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.11.16 10:04:53 =~=~=~=~=~=~=~=~=~=~=~=
+login as: usur ario
+usuario@127.0.0.2's password: 
+Linux usuario 6.12.107+deb13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.107-1 (2026-08-29) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Nov 16 09:38:54 2026 from 10.0.2.2
+usuario@usuario:~$ usuario@usuario:~$ docker volume crreate mysql_daatta
+mysql_data
+usuario@usuario:~$ docker run --name mysql-container2 -p 3307:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestusuario@usuario:~$ docker run --name mysql-container2 -p 3307:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+e13a427848f4d2b0aa922014fbe7aea29b0a10512e1c8fd49a443d218eb97318
+usuario@usuario:~$ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS          PORTS                                                    NAMES
+e13a427848f4   mysql:latest   "docker-entrypoint.s"   6 seconds ago   Up 5 seconds    33060/tcp, 0.0.0.0:3307->3306/tcp, [::]:3307->3306/tcp   mysql-container2
+97fcc3381819   mysql:latest   "docker-entrypoint.s"   7 days ago      Up 25 minutes   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp, 33060/tcp   mysql
+usuario@usuario:~$ ss -atun
+Netid State  Recv-Q Send-Q                           Local Address:Port   Peer Address:Port  
+udp   UNCONN 0      0                                    10.0.2.15:68          0.0.0.0:*     
+udp   UNCONN 0      0        [fd17:625c:f037:2:a00:27ff:feb4:84b6]:546            [::]:*     
+udp   UNCONN 0      0        [fd17:625c:f037:2:345:d3e4:714b:8daf]:546            [::]:*     
+udp   UNCONN 0      0           [fe80::82b2:84f1:ae68:9343]%enp0s3:546            [::]:*     
+tcp   LISTEN 0      128                                    0.0.0.0:22          0.0.0.0:*     
+tcp   LISTEN 0      4096                                   0.0.0.0:3307        0.0.0.0:*     
+tcp   LISTEN 0      4096                                   0.0.0.0:3306        0.0.0.0:*     
+tcp   ESTAB  0      0                                    10.0.2.15:22         10.0.2.2:53096 
+tcp   LISTEN 0      128                                       [::]:22             [::]:*     
+tcp   LISTEN 0      4096                                      [::]:3307           [::]:*     
+tcp   LISTEN 0      4096                                      [::]:3306           [::]:*     
+usuario@usuario:~$ mysql -h 127.0.0.1 -P 3307 -u root -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 26.10.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> eitexit
+Bye
+usuario@usuario:~$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS                  PORTS                                                    NAMES
+e13a427848f4   mysql:latest   "docker-entrypoint.s"   About a minute ago   Up About a minute       33060/tcp, 0.0.0.0:3307->3306/tcp, [::]:3307->3306/tcp   mysql-container2
+acf715c9eb19   mysql:latest   "docker-entrypoint.s"   3 days ago           Exited (1) 3 days ago                                                            mysql_container2
+97fcc3381819   mysql:latest   "docker-entrypoint.s"   7 days ago           Up 27 minutes           0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp, 33060/tcp   mysql
+usuario@usuario:~$ docker rm mysqlcontainer2_container2
+mysql_container2
+usuario@usuario:~$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS          PORTS                                                    NAMES
+e13a427848f4   mysql:latest   "docker-entrypoint.s"   2 minutes ago   Up 2 minutes    33060/tcp, 0.0.0.0:3307->3306/tcp, [::]:3307->3306/tcp   mysql-container2
+97fcc3381819   mysql:latest   "docker-entrypoint.s"   7 days ago      Up 27 minutes   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp, 33060/tcp   mysql
+usuario@usuario:~$ docker rm mysql
+Error response from daemon: cannot remove container "mysql": container is running: stop the container before removing or force remove
+usuario@usuario:~$ docker rm mysql-mysql-mysqlfmysqlomysqlrmysqlcmysqlemysql mysql
+mysql
+usuario@usuario:~$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                                                    NAMES
+e13a427848f4   mysql:latest   "docker-entrypoint.s"   2 minutes ago   Up 2 minutes   33060/tcp, 0.0.0.0:3307->3306/tcp, [::]:3307->3306/tcp   mysql-container2
+usuario@usuario:~$ docker rm mysql
+Error response from daemon: No such container: mysql
+usuario@usuario:~$ docker rm mysql-container2
+Error response from daemon: cannot remove container "mysql-container2": container is running: stop the container before removing or force remove
+usuario@usuario:~$ docker rm mysql-container2-mysql-container2-mysql-container2fmysql-container2omysql-container2rmysql-container2cmysql-container2emysql-container2 mysql-container2
+mysql-container2
+usuario@usuario:~$ docker rm --force mysql-container2mysql-container2ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+usuario@usuario:~$ codocker volume ls
+DRIVER    VOLUME NAME
+local     8a8fa4d9e832203048ddc99d52affef50d4f715a6117983a85dc0beaefca6cc1
+local     32781b7727c1f578fc2373a00869c98151450a12cfc572d4f4abad2019337eb9
+local     c3c490f87742b1b5d4f34bb88e0fc4ccdde37894f62aa114459b72ec4da38e48
+local     c954fe30717b68e89ca288da335a43ea1cc6fd3aa1501847d026080ea8eb2b3e
+local     mysql_data
+usuario@usuario:~$ docker volume priune
+WARNING! This will remove anonymous local volumes not used by at least one container.
+Are you sure you want to continue? [y/N] y
+Deleted Volumes:
+8a8fa4d9e832203048ddc99d52affef50d4f715a6117983a85dc0beaefca6cc1
+c954fe30717b68e89ca288da335a43ea1cc6fd3aa1501847d026080ea8eb2b3e
+c3c490f87742b1b5d4f34bb88e0fc4ccdde37894f62aa114459b72ec4da38e48
+32781b7727c1f578fc2373a00869c98151450a12cfc572d4f4abad2019337eb9
+
+Total reclaimed space: 638.5MB
+usuario@usuario:~$ docker volume prunels
+DRIVER    VOLUME NAME
+local     mysql_data
+usuario@usuario:~$ doceker run docker volume lsprunelsps -arm --force mysql-container2mysql-container2ps -arm --force mysqlmysqlps -arm mysql_container2ps -amysql -h 127.0.0.1 -P 3307 -u root -pss -atundocker psrun --name mysql-container2 -p 3307:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestusuario@usuario:~$ volume create mysql_data
+exitsu-docker run --name mysql-container2 -p 3307:3306 'e'psmysql -h 127.0.0.1 -u root -pss -atundocker psstart mysqlhistorydocker run --name mysql_container2 -p 3307:3306 -e MYSQL_ROOT_PASWORD=root -d mysql:latestusuario@usuario:~$ history
+mysql -h 127.0.0.1 -u root -pdocker exec -it mysql mysqlmysql -h 127.0.0.1ss -atundocker psstart mysqlpssu -apt updatesu -apt updatess -atundocker psrun --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest-p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestusuario@usuario:~$ v-p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestusuario@usuario:~$  -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestusuario@usuario:~$ m-p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestusuario@usuario:~$ y-p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestusuario@usuario:~$ s-p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestusuario@usuario:~$ q-p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestusuario@usuario:~$ l-p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestusuario@usuario:~$ _-p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestusuario@usuario:~$ d-p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -usuario@usuario:~$ t-p 3306:3306 -e MYSQL_ROOT_PASSWORD=root usuario@usuario:~$ a-p 3306:3306 -e MYSQL_ROOT_PASSWORD=rootusuario@usuario:~$ -p 3306:3306 -e MYSQL_ROOT_PASSWORD=rootusuario@usuario:~$ a-p 3306:3306 -e MYSQL_ROOT_PASSWORD=rootusuario@usuario:~$ -p 3306:3306 -e MYSQL_ROOT_PASSWORD=rootusuario@usuario:~$ -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root usuario@usuario:~$ a-p 3306:3306 -e MYSQL_ROOT_PASSWORD=root usuario@usuario:~$ t-p 3306:3306 -e MYSQL_ROOT_PASSWORD=rootusuario@usuario:~$ a-p 3306:3306 -e MYSQL_ROOT_PASSWORD=roousuario@usuario:~$ :-p 3306:3306 -e MYSQL_ROOT_PASSWORD=rousuario@usuario:~$ /-p 3306:3306 -e MYSQL_ROOT_PASSWORD=rusuario@usuario:~$ v-p 3306:3306 -e MYSQL_ROOT_PASSWORD=usuario@usuario:~$ a-p 3306:3306 -e MYSQL_ROOT_PASSWORDusuario@usuario:~$ r-p 3306:3306 -e MYSQL_ROOT_PASSWORusuario@usuario:~$ /-p 3306:3306 -e MYSQL_ROOT_PASSWOusuario@usuario:~$ l-p 3306:3306 -e MYSQL_ROOT_PASSWusuario@usuario:~$ i-p 3306:3306 -e MYSQL_ROOT_PASSusuario@usuario:~$ b-p 3306:3306 -e MYSQL_ROOT_PASusuario@usuario:~$ /-p 3306:3306 -e MYSQL_ROOT_PAusuario@usuario:~$ m-p 3306:3306 -e MYSQL_ROOT_Pusuario@usuario:~$ y-p 3306:3306 -e MYSQL_ROOT_usuario@usuario:~$ s-p 3306:3306 -e MYSQL_ROOTusuario@usuario:~$ q-p 3306:3306 -e MYSQL_ROOusuario@usuario:~$ l-p 3306:3306 -e MYSQL_ROusuario@usuario:~$  -p 3306:3306 -e MYSQL_Rusuario@usuario:~$ 
+
+3355ca21f775529bfdcb613a16ed96cd931c5af35e74f1804edb6bdad4ac07da
+usuario@usuario:~$ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                                                    NAMES
+3355ca21f775   mysql:latest   "docker-entrypoint.s"   3 minutes ago   Up 3 minutes   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp, 33060/tcp   mysql
+usuario@usuario:~$ mysql --h 127.0.0.1 -u root -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 26.10.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> showdat databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0,005 sec)
+
+MySQL [(none)]> cereate dtaaatabase prueba;
+Query OK, 1 row affected (0,008 sec)
+
+MySQL [(none)]> create database prueba;show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| prueba             |
+| sys                |
++--------------------+
+5 rows in set (0,001 sec)
+
+MySQL [(none)]> exit
+Bye
+usuario@usuario:~$ mysql -h 127.0.0.1 -u root -pdocker psrun --name mysql -v mysql_data:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestvolume ls
+run --name mysql -v mysql_data:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latestvolume ls
+run --name mysql -v mysql_data:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest -e MYSQL_Rusuario@usuario:~$ 7 -e MYSQL_Rusuario@usuario:~$ - -v mysql_data:/var/lib/mysql -p 3306:3307 -e MYSQL_usuario@usuario:~$ c -v mysql_data:/var/lib/mysql -p 3306:3307 -e MYSQLusuario@usuario:~$ o -v mysql_data:/var/lib/mysql -p 3306:3307 -e MYSQusuario@usuario:~$ n -v mysql_data:/var/lib/mysql -p 3306:3307 -e MYSusuario@usuario:~$ t -v mysql_data:/var/lib/mysql -p 3306:3307 -e MYusuario@usuario:~$ a -v mysql_data:/var/lib/mysql -p 3306:3307 -e Musuario@usuario:~$ i -v mysql_data:/var/lib/mysql -p 3306:3307 -e usuario@usuario:~$ n -v mysql_data:/var/lib/mysql -p 3306:3307 -eusuario@usuario:~$ e -v mysql_data:/var/lib/mysql -p 3306:3307 -usuario@usuario:~$ r -v mysql_data:/var/lib/mysql -p 3306:3307 usuario@usuario:~$ 2 -v mysql_data:/var/lib/mysql -p 3306:3307usuario@usuario:~$ :3307usuario@usuario:~$ 7:3307usuario@usuario:~$ 
+6
+4959f97bdfd77de6180d05395232ba90ecfd64c38f2165aa3ec4ddd95dc3b493
+usuario@usuario:~$ docke ps
+-bash: docke: orden no encontrada
+usuario@usuario:~$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                      PORTS                                                    NAMES
+4959f97bdfd7   mysql:latest   "docker-entrypoint.s"   33 seconds ago   Exited (1) 32 seconds ago                                                            mysql-container2
+3355ca21f775   mysql:latest   "docker-entrypoint.s"   22 minutes ago   Up 22 minutes               0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp, 33060/tcp   mysql
+usuario@usuario:~$ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                                    NAMES
+3355ca21f775   mysql:latest   "docker-entrypoint.s"   23 minutes ago   Up 23 minutes   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp, 33060/tcp   mysql
+usuario@usuario:~$ docker stop mysql
+mysql
+usuario@usuario:~$ docker start mysql-container2
+mysql-container2
+usuario@usuario:~$ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                                                    NAMES
+4959f97bdfd7   mysql:latest   "docker-entrypoint.s"   2 minutes ago   Up 6 seconds   33060/tcp, 0.0.0.0:3307->3306/tcp, [::]:3307->3306/tcp   mysql-container2
+usuario@usuario:~$ mysql -h 127.0.0.1 -P 3307 -u root -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 26.10.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| prueba             |
+| sys                |
++--------------------+
+5 rows in set (0,012 sec)
+
+MySQL [(none)]> create user 'usuario' identifiesd by 'usuario';
+Query OK, 0 rows affected (0,027 sec)
+
+MySQL [(none)]> select udser., hosthost from mysql.user-;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| root             | %         |
+| usuario          | %         |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
++------------------+-----------+
+6 rows in set (0,001 sec)
+
+MySQL [(none)]> grant all privileges to 'usuario' from prueba;;;;;;;;;;;;;;;;;;;;;;p;r;u;e;b;o;;a;¡ppruuu'upuruueba;eba;ueba';;.;*;';;;;;;;;;;;;;;;;;;;;;;;i;v;i;l;e;g;e;s; ; on 'prueba.*' to 'usuario';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''prueba.*' to 'usuario'' at line 1
+MySQL [(none)]> grant all privileges on 'prueba.*' to 'usuario';@;';&;;%;';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''prueba.*' to 'usuario'@'%'' at line 1
+MySQL [(none)]> grant all privileges on 'prueba.*' to 'usuario'@'%';^C
+MySQL [(none)]> grant all privileges on 'prueba.*' to 'usuario'@'%';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''prueba.*' to 'usuario'@'%'' at line 1
+MySQL [(none)]> ^C
+MySQL [(none)]> grant all privileges on 'prueba.*' to 'usuario'@'%'; p
+Query OK, 0 rows affected (0,017 sec)
+
+MySQL [(none)]> exit
+Bye
+usuario@usuario:~$ docker stop mysql-container2
+mysql-container2
+usuario@usuario:~$ dokcecker start mysql
+mysql
+usuario@usuario:~$ mysql -h 127.0.0.1 -P 3306 -u usuario -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 26.10.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| performance_schema |
+| prueba             |
++--------------------+
+3 rows in set (0,004 sec)
+
+MySQL [(none)]> exit
+Bye
+usuario@usuario:~$ docker volume create volumen2
