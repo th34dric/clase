@@ -1,5 +1,8 @@
 COMANDOS GIT (ED - RAMAS)
-git checkout -b develop -> crear otra rama
+git checkout -b develop -> crear otra rama ("develop" es el nombre de la otra rama)
+git checkout develop -> paa moverse a otra rama
+
+en el intellij file - new - Project from versión control -> para crear proyecto con el repositorio linkeado
 
 
 
