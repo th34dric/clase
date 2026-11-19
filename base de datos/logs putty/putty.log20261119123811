@@ -1,0 +1,138 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.11.19 12:38:11 =~=~=~=~=~=~=~=~=~=~=~=
+login as: usuario
+usuario@127.0.0.2's password: 
+Linux usuario 6.12.107+deb13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.107-1 (2026-08-29) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Nov 16 10:05:44 2026 from 10.0.2.2
+usuario@usuario:~$ history 
+    1  ls
+    2  pwd
+    3  su -
+    4  ip a
+    5  ss -atunp |grep ssh
+    6  su -
+    7  docker -v
+    8  $ docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+    9  exit
+   10  docker run
+   11  docker run
+   12  docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+   13  docker ps
+   14  mysql
+   15  docker exec  -it mysql /bin/bash
+   16  docker stop mysql 
+   17  su -
+   18  docker ps -a
+   19  docker ps
+   20  docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+   21  docker ps -a
+   22  docker rm
+   23  docker rm mysql 
+   24  docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+   25  docker ps
+   26  ss -atun
+   27  apt update
+   28  su -
+   29  apt update
+   30  su -
+   31  docker ps
+   32  docker start mysql
+   33  docker ps
+   34  ss -atun
+   35  mysql -h 127.0.0.1 -u root -p
+   36  docker exec -it mysql mysql -u root -p
+   37  mysql -h 127.0.0.1 -u root -p
+   38  history
+   39  docker run --name mysql_container2 -p 3307:3306 -e MYSQL_ROOT_PASWORD=root -d mysql:latest
+   40  history
+   41  docker start mysql
+   42  docker ps
+   43  ss -atun
+   44  mysql -h 127.0.0.1 -u root -p
+   45  docker ps
+   46  docker run --name mysql-container2 -p 3307:3306 'e'
+   47  su-
+   48  exit
+   49  docker volume create mysql_data
+   50  docker run --name mysql-container2 -p 3307:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+   51  docker ps
+   52  ss -atun
+   53  mysql -h 127.0.0.1 -P 3307 -u root -p
+   54  docker ps -a
+   55  docker rm mysql_container2
+   56  docker ps -a
+   57  docker rm mysql
+   58  docker rm --force mysql
+   59  docker ps -a
+   60  docker rm mysql
+   61  docker rm mysql-container2
+   62  docker rm --force mysql-container2
+   63  docker ps -a
+   64  docker volume ls
+   65  docker volume prune
+   66  docker volume ls
+   67  docker run --name mysql -v mysql_data:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+   68  docker ps
+   69  mysql -h 127.0.0.1 -u root -p
+   70  docker run --name mysql-container2 -v mysql_data:/var/lib/mysql -p 3307:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+   71  docke ps
+   72  docker ps -a
+   73  docker ps
+   74  docker stop mysql
+   75  docker start mysql-container2
+   76  docker ps
+   77  mysql -h 127.0.0.1 -P 3307 -u root -p
+   78  docker stop mysql-container2
+   79  docker start mysql
+   80  mysql -h 127.0.0.1 -P 3306 -u usuario -p
+   81  history 
+usuario@usuario:~$ mysql -u root -p
+Enter password: 
+ERROR 2002 (HY000): Can't connect to local server through socket '/run/mysqld/mysqld.sock' (2)
+usuario@usuario:~$ mysql -h 127.0.0.1 -u root -p
+Enter password: 
+ERROR 2002 (HY000): Can't connect to server on '127.0.0.1' (115)
+usuario@usuario:~$ mysql -h 127.0.0.1 -u root -phistory mysql -h 127.0.0.1 -P 3306 -u usuario -pdocker start mysqlop mysql-container2art mysqlop mysql-container2art mysqlmysql -h 127.0.0.1 -P 3306 -u usuario -pdocker start mysqlop mysql-container2mysql -h 127.0.0.1 -P 3307 -u root -pdocker stop mysql-container2art mysql
+mysql
+usuario@usuario:~$ docker start mysqlmysql -h 127.0.0.1 -u root -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 26.10.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> select userhow databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| prueba             |
+| sys                |
++--------------------+
+5 rows in set (0,014 sec)
+
+MySQL [(none)]> select user, host from mysql.user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| root             | %         |
+| usuario          | %         |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
++------------------+-----------+
+6 rows in set (0,001 sec)
+
+MySQL [(none)]> 
